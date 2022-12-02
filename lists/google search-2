@@ -1,0 +1,18 @@
+# Вывод из списка s строк , в которых присутствуют все строки из запроса k
+n = int(input())
+s = []
+s1 = []
+s2 = []
+for i in range(n):
+    s.append(input())
+k = int(input())
+for j in range(k):
+    s1.append(input())
+for sent in s:
+    count = 0
+    for l in range(k):
+        if s1[l].lower() in sent.lower():
+            count +=1
+            if count == k:
+                s2.append(sent)
+print(*s2, sep='\n')

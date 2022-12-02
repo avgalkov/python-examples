@@ -1,0 +1,13 @@
+# Является ли слово палиндромом 
+s = input()
+s1 = ''
+s2 = ''
+k = int(float(len(s)/2))
+for i in range(k):
+    s1 += s[i]
+for j in range(-1,-k -1, -1):
+    s2 += s[j]
+if s1 == s2:
+    print('YES')
+else:
+    print('NO')
