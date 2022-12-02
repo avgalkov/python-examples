@@ -1,0 +1,14 @@
+n = int(input())
+numbers = []
+result = []
+min_num = 0
+max_num = 0
+for i in range(n):
+    n1 = int(input())
+    numbers.append(n1)
+min_num = min(numbers)
+max_num = max(numbers)
+for j in range(len(numbers)):
+    if numbers[j] != min_num and numbers[j] != max_num:
+        result.append(numbers[j]) 
+print(*result, sep='\n')
