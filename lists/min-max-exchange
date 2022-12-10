@@ -1,0 +1,20 @@
+# Замена мест минимального и максимального значения чисел, перечисленных на всоде в виде строки
+s = input()
+s1 = s.split()
+numbers =[]
+for i in s1:
+    numbers.append(int(i))   
+min_pos = numbers.index(min(numbers))
+min_number = min(numbers)
+max_pos = numbers.index(max(numbers))
+max_number = max(numbers)
+
+
+del numbers[min_pos]
+numbers.insert(min_pos, max_number)
+del numbers[max_pos]
+numbers.insert(max_pos, min_number)
+print(*numbers)
+
+# Проще после фиксирования минимального и максимального значения, а так же их позиций, применить выражение
+# s[min_pos], s[max_pos] = s[max_pos], s[min_pos]
